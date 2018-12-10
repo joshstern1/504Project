@@ -1,4 +1,7 @@
-#Parallel Preflow-Push with MPI
+# Parallel Preflow-Push with MPI
+This is my final project for EC504, in which my goal was to implement a parallel version of the pre-flow push algorithm for finding maximum flow. The version of the pre-flow push algorithm I chose to implement is based on the Pulse Algorithm developed by Andrew Vladislav. Vladislav published his algorithm, which is used to implement pre-flow push in a parallel environment, in his 1987 Ph.D. dissertation Efficient Graph Algorithms for Sequential and Parallel Computers by Andrew Vladislav Goldberg (Pg 33-34). The full text can be found at http://hdl.handle.net/1721.1/14912.
+
+I also provide in instructions for running my code on the BU Shared Computing Cluster (SCC), so that you can have every process run on a separate node. My performance results from this are shared in my report.
 
 ## Setting up MPI
 If you are running the code on a system with MPI already installed, you may skip this section. If you are running this code on your PC, and you do not have MPI installed, download MPICH-3.2 from:
