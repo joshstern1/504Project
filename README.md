@@ -32,3 +32,13 @@ Installation instructions: (from: https://www.mpich.org/static/downloads/3.2/mpi
 ```make install 2>&1 | tee mi.txt```
 
 
+## Input graph file (I have provided graph.txt as an example)
+
+The program expects one argument: a text file containing an adjacency matrix for the input graph. The format of the text file is as follows:
+    
+  #Vertices
+  #Edges
+  Rank of source
+  Rank of sink
+  Adjacency matrix (Each entry in the adjacency matrix contains either the capacity of an edge, or a 0 if the edge does not exist)
+  The number 0 (used to indicate the end)
