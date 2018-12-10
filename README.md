@@ -43,3 +43,34 @@ The program expects one argument: a text file containing an adjacency matrix for
   Adjacency matrix (Each entry in the adjacency matrix contains either the capacity of an edge, or a 0 if the edge does not exist)
   The number 0 (used to indicate the end)
  ```
+ 
+## Compilation and Execution
+
+This code was written in C. However, you must be careful to adhere to the following compilation instructions, or else the code will not run properly.
+    
+#### To compile: 
+
+```mpicc parallel_preflowpush.c```
+
+#### To run on a PC: 
+
+```mpiexec -n #numprocs a.out graph.txt```
+
+Replace #numprocs with the number of vertices in the graph
+Ex: To run with 8 vertices:
+    
+ ```mpiexec -n 8 a.out graph.txt```
+
+ (if mpiexec does not work, replace with mpirun)
+
+#### To run on the SCC: 
+Let V = total number of vertices
+Let N = V/28
+
+```qsub -pe mpi_28_tasks_per_node V -b y "mpirun -npernode N ./a.out graph.txt"```
+
+Ex: to run with 448 vertices (V = 448, N = 28)
+
+```qsub -pe mpi_28_tasks_per_node 448 -b y "mpirun -npernode 28 ./a.out graph.txt"```
+
+
