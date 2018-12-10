@@ -32,5 +32,3 @@ Installation instructions: (from: https://www.mpich.org/static/downloads/3.2/mpi
 ```make install 2>&1 | tee mi.txt```
 
 
-(from: https://www.mpich.org/static/downloads/3.2/mpich-3.2-installguide.pdf)
-
