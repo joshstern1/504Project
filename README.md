@@ -67,13 +67,13 @@ Ex: To run with 8 vertices:
  (if mpiexec does not work, replace with mpirun)
 
 #### To run on the SCC: 
-Let V = total number of vertices
-Let N = V/28
+To run on the SCC, you must specify the total number of nodes you want, and the amount of cores that you need on each node.
+Let V = Total number of cores 
+Let N = Number of cores on each node 
+(Note that you can allocate a max of 16 nodes, with 28 cores on each node, for a total of 448 cores)
 
 ```qsub -pe mpi_28_tasks_per_node V -b y "mpirun -npernode N ./a.out graph.txt"```
 
-Ex: to run with 448 vertices (V = 448, N = 28)
+Ex: to run with 448 total cores (16 nodes), with 28 cores on each node:
 
 ```qsub -pe mpi_28_tasks_per_node 448 -b y "mpirun -npernode 28 ./a.out graph.txt"```
-
-
