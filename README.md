@@ -34,6 +34,11 @@ Installation instructions: (from: https://www.mpich.org/static/downloads/3.2/mpi
 
 ```make install 2>&1 | tee mi.txt```
 
+7. Add mpich-install/bin directory to your path
+
+```export PATH=/home/you/mpich-install/bin:$PATH```
+
+
 
 ## Input graph file (I have provided graph.txt as an example)
 
